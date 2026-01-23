@@ -1,13 +1,40 @@
 #Notes
 Notes = ['C', 'C#', 'D', 'Eb', 'E', 'F', 'F#', 'G', 'Ab', 'A', 'Bb', 'B']
+Note_ALIASES = {
+    'C#': 'Db',
+    'D#': 'Eb',
+    'F#': 'Gb',
+    'G#': 'Ab',
+    'A#': 'Bb',
+    'Db': 'C#',
+    'Eb': 'D#',
+    'Gb': 'F#',
+    'Ab': 'G#',
+    'Bb': 'A#'
+}
+PREFERED_ALIASES = {
+    'Db': 'C#',
+    'D#': 'Eb',
+    'Gb': 'F#',
+    'G#': 'Ab',
+    'A#': 'Bb'
+}
 
 #Scale Intervals
 MAJOR_SCALE_INTERVALS = [2, 2, 1, 2, 2, 2, 1]
 MINOR_SCALE_INTERVALS = [2, 1, 2, 2, 1, 2, 2]
 
 # Chord Types
-MAJOR_CHORD = ['1','3','5']
-MINOR_CHORD = ['1','3b','5']
+SUPPORTED_CHORDS = {
+    'MAJOR_CHORD': ['1','3','5'],
+    'MINOR_CHORD': ['1','3b','5'],
+    'DIMINISHED_CHORD': ['1','3b','5b'],
+    'AUGMENTED_CHORD': ['1','3','5#'],
+    'SUSPENDED4_CHORD': ['1','4','5'],
+    'SUSPENDED2_CHORD': ['1','2','5'],
+    'MAJOR_7th_CHORD': ['1','3','5','7'],
+    'DOMINANT_7th_CHORD': ['1','3','5','7b']
+    }
 
 #Guitar constants
 FRET_COUNT = 18

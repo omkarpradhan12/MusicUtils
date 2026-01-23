@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "theory_snake"  # Change this if you pick a different name
-version = "0.2.2"  # Updated from 0.2.1
+version = "0.2.3"  # Updated from 0.2.2
 authors = [
   { name="Omkar Pradhan", email="omkarelectric892@gmail.com" },
 ]

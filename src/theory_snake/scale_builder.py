@@ -1,4 +1,4 @@
-from .consts import Notes, MAJOR_SCALE_INTERVALS, MINOR_SCALE_INTERVALS
+from .consts import Notes, MAJOR_SCALE_INTERVALS, MINOR_SCALE_INTERVALS, Note_ALIASES
 
 def build_scale(root_note, scale_type):
     scale_type = scale_type.lower()
@@ -9,6 +9,11 @@ def build_scale(root_note, scale_type):
             intervals = MINOR_SCALE_INTERVALS
         case _:
             return ValueError("Unsupported scale type")
+    if root_note not in Notes:
+        if root_note in Note_ALIASES:
+            root_note = Note_ALIASES[root_note]
+        else:
+            raise ValueError("Invalid root note")
     scale = [root_note]
     current_index = Notes.index(root_note)
     for interval in intervals:
