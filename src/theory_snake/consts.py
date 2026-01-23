@@ -36,6 +36,17 @@ SUPPORTED_CHORDS = {
     'DOMINANT_7th_CHORD': ['1','3','5','7b']
     }
 
+CHORD_WEIGHTS = {
+    'MAJOR_CHORD': 1.2,        # Highest priority
+    'MINOR_CHORD': 1.2,
+    'MAJOR_7th_CHORD': 1.1,
+    'DOMINANT_7th_CHORD': 1.1,
+    'SUSPENDED4_CHORD': 0.9,   # Lower priority than triads
+    'SUSPENDED2_CHORD': 0.9,
+    'DIMINISHED_CHORD': 0.8,
+    'AUGMENTED_CHORD': 0.8
+}
+
 #Guitar constants
 FRET_COUNT = 18
 COMMON_TUNNINGS = {
